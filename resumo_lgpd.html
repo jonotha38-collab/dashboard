@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Executivo LGPD</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #1c1e21;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e4e6eb;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+            color: #1877f2;
+            font-size: 24px;
+        }
+        .timestamp {
+            color: #65676b;
+            font-size: 14px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: #ffffff;
+            border: 1px solid #e4e6eb;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 4px solid #1877f2;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .card.success { border-top-color: #31a24c; }
+        .card.warning { border-top-color: #e52a2a; }
+        .card.neutral { border-top-color: #f6b024; }
+        
+        .card-title {
+            color: #65676b;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        .card-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1c1e21;
+            margin-bottom: 5px;
+        }
+        .card-subtext {
+            font-size: 13px;
+            color: #65676b;
+            margin-bottom: 15px;
+        }
+        /* Progress Bar Styling */
+        .progress-bg {
+            background-color: #e4e6eb;
+            height: 8px;
+            border-radius: 4px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #1877f2;
+            border-radius: 4px;
+        }
+        .card.success .progress-fill { background-color: #31a24c; }
+        .card.warning .progress-fill { background-color: #e52a2a; }
+        .card.neutral .progress-fill { background-color: #f6b024; }
+        
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #8c939d;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛡️ Resumo Executivo LGPD</h1>
+            <div class="timestamp">Atualizado em: 09/10/2026 12:05:22</div>
+        </div>
+        
+        <div class="grid">
+            <!-- ROPA -->
+            <div class="card">
+                <div class="card-title">Fluxos Mapeados (ROPA)</div>
+                <div class="card-value">0</div>
+                <div class="card-subtext">0.0% ativos (0 de 0)</div>
+                <div class="progress-bg">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+
+            <!-- Mitigação -->
+            <div class="card success">
+                <div class="card-title">Ações Mitigadas</div>
+                <div class="card-value">0/0</div>
+                <div class="card-subtext">0.0% dos riscos tratados</div>
+                <div class="progress-bg">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+
+            <!-- Riscos Críticos -->
+            <div class="card warning">
+                <div class="card-title">Riscos Críticos</div>
+                <div class="card-value">0</div>
+                <div class="card-subtext">100.0% tratados (Restam 0 pendentes)</div>
+                <div class="progress-bg">
+                    <div class="progress-fill" style="width: 100%;"></div>
+                </div>
+            </div>
+
+            <!-- Requisições -->
+            <div class="card neutral">
+                <div class="card-title">Requisições de Titulares</div>
+                <div class="card-value">0/0</div>
+                <div class="card-subtext">0.0% respondidas com sucesso</div>
+                <div class="progress-bg">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Relatório gerado automaticamente a partir da base do MVP GEEDU.
+        </div>
+    </div>
+</body>
+</html>
